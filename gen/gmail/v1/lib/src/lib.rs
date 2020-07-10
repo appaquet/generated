@@ -14142,7 +14142,7 @@ pub mod resources {
                 pub(crate) auth: &'a dyn ::google_api_auth::GetAccessToken,
                 user_id: String,
                 include_spam_trash: Option<bool>,
-                label_ids: Option<Vec<String>>,
+                label_ids: Option<String>,
                 max_results: Option<u32>,
                 page_token: Option<String>,
                 q: Option<String>,
@@ -14161,7 +14161,7 @@ pub mod resources {
                     self
                 }
                 #[doc = "Only return threads with labels that match all of the specified label IDs."]
-                pub fn label_ids(mut self, value: impl Into<Vec<String>>) -> Self {
+                pub fn label_ids(mut self, value: impl Into<String>) -> Self {
                     self.label_ids = Some(value.into());
                     self
                 }
